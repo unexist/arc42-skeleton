@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.unexist</groupId>
-    <artifactId>arc42-skeleton</artifactId>
+    <artifactId>skeleton-arc42</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <name>arc42-skeleton</name>
@@ -23,8 +23,7 @@
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 
-        <org.sahli.asciidoc.confluence.publisher.version>0.12.0
-        </org.sahli.asciidoc.confluence.publisher.version>
+        <confluence.publisher.version>0.12.0</confluence.publisher.version>
 
         <!-- Confluence config -->
         <!-- NOTE: Be careful with the ancestorID, everything will be overwritten -->
@@ -96,6 +95,7 @@
                             <attributes>
                                 <toc>left</toc>
                                 <sectanchors>true</sectanchors>
+                                <source-highlighter>highlight.js</source-highlighter>
                             </attributes>
                         </configuration>
                     </execution>
@@ -113,7 +113,7 @@
                     <plugin>
                         <groupId>org.sahli.asciidoc.confluence.publisher</groupId>
                         <artifactId>asciidoc-confluence-publisher-maven-plugin</artifactId>
-                        <version>${org.sahli.asciidoc.confluence.publisher.version}</version>
+                        <version>${confluence.publisher.version}</version>
                         <configuration>
                             <asciidocRootFolder>${asciidocDirectory}</asciidocRootFolder>
                             <sourceEncoding>UTF-8</sourceEncoding>
