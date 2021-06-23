@@ -1,4 +1,3 @@
-arc42-skeleton
-====
+= Skeleton for arc42 documents
 
 This project is just a common starter for arc42 based projects with confluence support.
